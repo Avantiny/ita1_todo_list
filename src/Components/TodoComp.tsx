@@ -12,17 +12,16 @@ type Props = {
   onDeleteButton: () => void
 }
 
-const TodoComp = ({
-  isCompleted,
-  todoText,
-  onCompleted,
-  onChangeTodoText,
-  onDeleteButton,
-}: Props) => (
+const TodoComp = (props: Props) => (
   <ListItem>
-    <Checkbox checked={isCompleted} onChange={onCompleted} />
-    <TextField color='secondary' value={todoText} type='text' onChange={onChangeTodoText} />
-    <Button onClick={onDeleteButton}>x</Button>
+    <Checkbox checked={props.isCompleted} onChange={props.onCompleted} />
+    <TextField
+      color='secondary'
+      value={props.todoText}
+      type='text'
+      onChange={props.onChangeTodoText}
+    />
+    <Button onClick={props.onDeleteButton}>x</Button>
   </ListItem>
 )
 

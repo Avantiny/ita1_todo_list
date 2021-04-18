@@ -1,32 +1,33 @@
 import Button from '@material-ui/core/Button'
 import React from 'react'
 
+type FilterStatus = 'all' | 'active' | 'completed'
 type Props = {
-  filterStatus: string
-  onChangeFilterStatus: (newFilterStatus: string) => void
+  filterStatus: FilterStatus
+  onChangeFilterStatus: (newFilterStatus: FilterStatus) => void
 }
 
-const ActiveFilterButtons = ({ filterStatus, onChangeFilterStatus }: Props) => {
+const ActiveFilterButtons = (props: Props) => {
   return (
     <div>
       <Button
-        variant={filterStatus === 'all' ? 'contained' : 'outlined'}
+        variant={props.filterStatus === 'all' ? 'contained' : 'outlined'}
         color='secondary'
-        onClick={() => onChangeFilterStatus('all')}
+        onClick={() => props.onChangeFilterStatus('all')}
       >
         All
       </Button>
       <Button
-        variant={filterStatus === 'active' ? 'contained' : 'outlined'}
+        variant={props.filterStatus === 'active' ? 'contained' : 'outlined'}
         color='secondary'
-        onClick={() => onChangeFilterStatus('active')}
+        onClick={() => props.onChangeFilterStatus('active')}
       >
         Active
       </Button>
       <Button
-        variant={filterStatus === 'completed' ? 'contained' : 'outlined'}
+        variant={props.filterStatus === 'completed' ? 'contained' : 'outlined'}
         color='secondary'
-        onClick={() => onChangeFilterStatus('completed')}
+        onClick={() => props.onChangeFilterStatus('completed')}
       >
         Completed
       </Button>
