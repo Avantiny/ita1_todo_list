@@ -1,3 +1,12 @@
+# TODO List
+
+A todo list app I created for IT Absolvent React course around November 2019.
+Demo: https://todolist.dkure.cz/subdom/todolist/
+
+This was basically my first successfuly written TypeScript/React app where I learned about the basics. This was the first time I encountered basic React functionalities/writing styles such as jsx, component composition, passing props, creating and managing state. It is also adjusted for mobile devices. The app makes also use of local storage which stores the state of the todos. There are no hooks in this app since I wasn't aware of them at the time (if I remember correctly, they weren't really a standard back then). For styling I used Material UI and styled-components. TodoList.tsx is still a pretty giant file that I would like to get to and refactor into smaller components.
+
+The app allows the user to create, change or delete todos which are shown as a string. User can also check/uncheck the 'Active' checkbox and then filter shown todos based on this condition. There is also a 'Clear all' button for deleting all the todos and 'Toggle todos' which makes the todos invisible but doesn't delete them.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,3 +53,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
